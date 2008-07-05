@@ -1,9 +1,9 @@
 Summary:	Full-featured exteansible desktop note-taking application for Unix
 Name:	  	notefinder
 Version:	2.5
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD-Like and GPLv2+
-Group:		Graphical desktop/Other
+Group:		Office
 Source0: 	http://notefinder.googlecode.com/files/%name-%version.tar.gz
 URL:		http://code.google.com/p/notefinder/
 Requires:	python-qt4 >= 4.4.0
@@ -33,6 +33,15 @@ Features:
 %install
 rm -rf $RPM_BUILD_ROOT
 ./install.sh %buildroot%_prefix
+
+# install plugins
+for i in plugins/*
+do
+	cd $i
+	python setup.py install --root=%{buildroot} --prefix=%_prefix
+	cd -
+done
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
