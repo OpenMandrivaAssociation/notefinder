@@ -7,7 +7,7 @@ Group:		Office
 Source0: 	http://notefinder.googlecode.com/files/%name-%version.tar.gz
 URL:		http://code.google.com/p/notefinder/
 Requires:	python-qt4 >= 4.4.0
-%py_requires
+%py_requires -d
 BuildRequires:	python-setuptools
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
