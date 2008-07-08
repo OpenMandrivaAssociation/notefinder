@@ -1,7 +1,7 @@
 Summary:	Full-featured exteansible desktop note-taking application for Unix
 Name:	  	notefinder
-Version:	2.5
-Release:	%mkrel 2
+Version:	2.6
+Release:	%mkrel 1
 License:	BSD-Like and GPLv2+
 Group:		Office
 Source0: 	http://notefinder.googlecode.com/files/%name-%version.tar.gz
