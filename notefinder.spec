@@ -1,7 +1,8 @@
 Summary:	Full-featured exteansible desktop note-taking application for Unix
 Name:	  	notefinder
-Version:	3.1.5
+Version:	0.1.8
 Release:	%mkrel 1
+Epoch:		1
 License:	BSD-Like and GPLv2+
 Group:		Office
 Source0: 	http://notefinder.googlecode.com/files/%name-%version.tar.gz
@@ -9,6 +10,7 @@ URL:		http://code.google.com/p/notefinder/
 Requires:	python-qt4 >= 4.4.0
 %py_requires -d
 BuildRequires:	python-setuptools
+BuildRequires:	desktop-file-utils
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -35,6 +37,12 @@ Features:
 %install
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=%{buildroot}
+
+desktop-file-install --vendor='' \
+	--dir=%buildroot%_datadir/applications \
+	--remove-key='Version' \
+	--add-category='Qt;KDE' \
+	%buildroot%_datadir/applications/*.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
