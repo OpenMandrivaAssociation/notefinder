@@ -1,6 +1,6 @@
 Summary:	Full-featured exteansible desktop note-taking application for Unix
 Name:	  	notefinder
-Version:	0.2
+Version:	0.3.7
 Release:	%mkrel 1
 Epoch:		1
 License:	BSD-Like and GPLv2+
@@ -30,7 +30,7 @@ Features:
 * Can be extended with Python plugins
 
 %prep
-%setup -q
+%setup -qn %name
 
 %build
 
