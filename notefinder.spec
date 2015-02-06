@@ -1,7 +1,7 @@
 Summary:	Full-featured exteansible desktop note-taking application for Unix
 Name:	  	notefinder
 Version:	0.4
-Release:	5
+Release:	6
 Epoch:		1
 License:	BSD-Like and GPLv2+
 Group:		Office
