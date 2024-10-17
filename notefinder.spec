@@ -6,7 +6,7 @@ Epoch:		1
 License:	BSD-Like and GPLv2+
 Group:		Office
 Source0: 	http://notefinder.googlecode.com/files/%{name}-%{version}.tar.gz
-URL:		http://code.google.com/p/notefinder/
+URL:		https://code.google.com/p/notefinder/
 Requires:	python-qt4 >= 4.4.0
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
